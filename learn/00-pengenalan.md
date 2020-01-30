@@ -41,23 +41,21 @@ Karena semua mudah digunakan, dan terjaga dari sisi state, maka operator atau de
 
 #### Terraform dibanding yang lain
 
-- Provide high level description of infrastructure
-- support parallel management of resource
-- separate planning from execution (Dry-run)
-- detailed documentation
-- support major cloud provider
+- Mendukung banyak could provider.
+- Dokumentasi (meski tool lain juga ada yang dokumentasinya bagus)
+- Dengan melihat `plan`, admin dapat melihat apa saja yang akan dijalankan oleh script.
+- Bisa menjalankan proses Dry-run, artinya melakukan eksekusi tanpa harus menyentuh infrastruktur.
+- Menyimpan state, dengan state ini, Terraform bisa melanjutkan eksekusi yang terhenti.
 
-#### Infrastructure as code
+- BIsa memberikan pandangan deskripsi infrastuktur secara high level
+- Bisa menjalankan manajemen resource secara paralel
 
-- provide a coding workflow to create infra
+Di atas disebutkan infrastructure as code, sebenarnya apa itu? menurut Wikipedia, dan artikel lain, **IaC** ini adalah proses dimana definisi dari infrastruktur yang kita buat, baik server, cpu, ram, jaringan, keamanan dituangkan dalam bentuk kode dalam file, ada yang menggunakan DSL (Domain Specific Language), atau menggunakan bahasa pemograman seperti python, ruby.
 
-- expose a workflow to managing, updates to existing infra
+Dan kode-kode yang mendefinisikan infrastruktur ini, seperti kode pada umumnya, bisa dilakukan versioning dengan SCM (Source Code Management) seperti Git, dari sini bisa terlahir pulalah istilah GitOps.
 
-- integrate with application code workflow (git)
+Infrastructure as code ini menyediakan workflow yang bisa digunakan untuk membuat infrastruktur, bisa dihapus, ditambahkan, diperbaharui dengan representasi kode.
 
-- provide modular, sharable component for separation of condern 
+Dengan menggunakan kode juga, menjadi lebih mudah untuk membaginya dengan tim lain, atau bisa saling menambahkan kode, sehingga lebih lengkap, dan yang paling penting, kode itu bisa dibaca oleh manusia, admin tidak perlu login satu-satu dan melihat dashboard dari cloud provider yang dipakai, selama ada API yang disediakan bisa dilakukan melalui kode tersebut.
 
-- human readable configuration, so it's easy to understand by human and could see the infrastructure by reading the code
-
-  
-
+Dan juga keunggulan lain, meski tidak selalu harus di cloud, di server baremetal pun tetap bisa digunakan, selama ada koneksi SSH ke server tersebut, IaC tetap bisa dijalankan untuk melakukan provisioning, dan menjalankan perintah yang didefinisikan di dalam IaC tersebut.
