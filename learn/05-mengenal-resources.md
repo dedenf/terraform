@@ -14,7 +14,7 @@ Terraform menggunakan API dari provider yang dideskripsikan untuk aktivitas `cre
 
 Contoh sebelumnya penulisan blok resource sederhana seperti
 
-```tcl
+```hcl
 resource "aws_instance" "first-try" {
 	ami = "ami-2757f631"
 	instance_type = "t2.micro"

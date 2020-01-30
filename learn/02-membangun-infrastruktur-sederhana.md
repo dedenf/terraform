@@ -20,7 +20,7 @@ File `.tf` dituliskan seperti file json komposisinya, dan berikut susunan file d
 
 KIta mulai dengan konfigurasi Terraform sederhana, membuat file `simple.tf`
 
-```json
+```hcl
 provider "aws" {
 	profile = "default"
 	region 	= "ap-southeast-1"
