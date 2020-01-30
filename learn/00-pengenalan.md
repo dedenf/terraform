@@ -59,3 +59,7 @@ Infrastructure as code ini menyediakan workflow yang bisa digunakan untuk membua
 Dengan menggunakan kode juga, menjadi lebih mudah untuk membaginya dengan tim lain, atau bisa saling menambahkan kode, sehingga lebih lengkap, dan yang paling penting, kode itu bisa dibaca oleh manusia, admin tidak perlu login satu-satu dan melihat dashboard dari cloud provider yang dipakai, selama ada API yang disediakan bisa dilakukan melalui kode tersebut.
 
 Dan juga keunggulan lain, meski tidak selalu harus di cloud, di server baremetal pun tetap bisa digunakan, selama ada koneksi SSH ke server tersebut, IaC tetap bisa dijalankan untuk melakukan provisioning, dan menjalankan perintah yang didefinisikan di dalam IaC tersebut.
+
+Coba bayangkan jika infrastruktur kita terdiri dari AWS EC2, AWS Lamda, monitoring dari New Relic, Datadog, GCP, Cloudflare.
+
+Dengan IaC, semua itu bisa didefinisikan dalam bentuk kode.
